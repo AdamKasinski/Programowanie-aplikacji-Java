@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane alignment="center" hgap="10" prefHeight="330.0" prefWidth="501.0" vgap="10" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.DodajRybe">
+    <columnConstraints>
+        <ColumnConstraints />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints />
+    </rowConstraints>
+   <children>
+      <AnchorPane prefHeight="331.0" prefWidth="504.0">
+         <children>
+            <TextField fx:id="gatunek" layoutX="53.0" layoutY="50.0" promptText="gatunek" />
+            <TextField fx:id="rozmiar" layoutX="53.0" layoutY="111.0" promptText="rozmiar" />
+            <CheckBox fx:id="czyZweryfikowana" layoutX="79.0" layoutY="165.0" mnemonicParsing="false" text="czy zweryfikowana" />
+            <DatePicker fx:id="dataZlowienia" layoutX="41.0" layoutY="212.0" promptText="data złowienia" />
+            <Button fx:id="dodajRybe" layoutX="400.0" layoutY="280.0" mnemonicParsing="false" onAction="#dodajRybe" text="dodaj rybę" />
+            <Label layoutX="244.0" layoutY="49.0" prefWidth="113.0" text="gatunek">
+               <font>
+                  <Font size="18.0" />
+               </font></Label>
+            <Label layoutX="244.0" layoutY="110.0" prefWidth="60.0" text="rozmiar">
+               <font>
+                  <Font size="17.0" />
+               </font></Label>
+         </children></AnchorPane>
+   </children>
+
+</GridPane>

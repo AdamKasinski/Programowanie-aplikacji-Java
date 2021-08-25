@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane alignment="center" hgap="10" prefHeight="570.0" prefWidth="709.0" vgap="10" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Ryby">
+    <columnConstraints>
+        <ColumnConstraints />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints />
+    </rowConstraints>
+    <TabPane prefHeight="562.0" prefWidth="721.0" tabClosingPolicy="UNAVAILABLE">
+    <tabs>
+        <Tab text="fanatycy">
+            <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="532.0" prefWidth="674.0">
+                  <children>
+                     <TableView fx:id="wedkarze" layoutY="1.0" prefHeight="532.0" prefWidth="490.0">
+                       <columns>
+                           <TableColumn fx:id="imie" prefWidth="75.0" text="imie" />
+                           <TableColumn fx:id="nazwisko" prefWidth="107.19998168945312" text="nazwisko" />
+                           <TableColumn fx:id="kiedyWydana" prefWidth="128.80001831054688" text="data wydania karty" />
+                           <TableColumn fx:id="czyDoloczyl" prefWidth="84.79998779296875" text="czy należy" />
+                           <TableColumn fx:id="dodajRybe" prefWidth="92.79996337890623" text="dodaj rybę" />
+                       </columns>
+                     </TableView>
+                     <Button fx:id="dodajFanatyka" disable="true" layoutX="500.0" layoutY="305.0" mnemonicParsing="false" onMouseClicked="#wezDane" prefHeight="26.0" prefWidth="135.0" text="Dodaj fanatyka" />
+                     <Button fx:id="zainicjuj" layoutX="538.0" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#zainicjuj" text="Zainicjuj" />
+                     <TextField fx:id="imieWedkarza" disable="true" layoutX="494.0" layoutY="75.0" promptText="imię" />
+                     <TextField fx:id="nazwiskoWedkarza" disable="true" layoutX="494.0" layoutY="121.0" promptText="nazwisko" />
+                     <DatePicker fx:id="dataUzyskania" layoutX="499.0" layoutY="228.0" promptText="data uzyskania licencji" />
+                     <CheckBox fx:id="czyNalezy" disable="true" layoutX="499.0" layoutY="173.0" mnemonicParsing="false" text="czy należy do związku" />
+                  </children></AnchorPane>
+            </content>
+        </Tab>
+        <Tab onSelectionChanged="#wypiszRyby" text="ryby">
+            <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                  <children>
+                     <TableView fx:id="ryby" prefHeight="531.0" prefWidth="651.0">
+                       <columns>
+                         <TableColumn fx:id="gatunek" prefWidth="75.0" text="gatunek" />
+                         <TableColumn fx:id="rozmiar" prefWidth="143.19998168945312" text="rozmiar" />
+                           <TableColumn fx:id="czyZweryfikowana" prefWidth="140.8000030517578" text="czy zweryfikowana" />
+                           <TableColumn fx:id="ktoZlowil" prefWidth="136.60000610351562" text="kto złowił" />
+                           <TableColumn fx:id="dataZlowienia" prefWidth="156.4000244140625" text="data złowienia" />
+                       </columns>
+                     </TableView>
+                  </children></AnchorPane>
+            </content>
+        </Tab>
+    </tabs>
+    </TabPane>
+</GridPane>
